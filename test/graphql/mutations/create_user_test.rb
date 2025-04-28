@@ -9,8 +9,7 @@ class Mutations::CreateUserTest < ActiveSupport::TestCase
           authProvider: $authProvider
         }) {
           name,
-          email,
-          password
+          email
         }
 
       }
@@ -38,6 +37,5 @@ class Mutations::CreateUserTest < ActiveSupport::TestCase
     assert result["data"]["createUser"]
     assert_equal result["data"]["createUser"]["name"], "Cyril Iyadi"
     assert_equal result["data"]["createUser"]["email"], "iyadicy@gmail.com"
-    assert result["data"]["createUser"]["password"]
   end
 end
