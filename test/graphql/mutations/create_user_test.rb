@@ -11,7 +11,6 @@ class Mutations::CreateUserTest < ActiveSupport::TestCase
           name,
           email
         }
-
       }
     GRAPHQL
 
