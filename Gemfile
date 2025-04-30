@@ -11,7 +11,7 @@ gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem "graphql", "~> 2.0"
+gem "graphql", "~> 2.5"
 
 gem "bcrypt", "~> 3.1.13"
 
