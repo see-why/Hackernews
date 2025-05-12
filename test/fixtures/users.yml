@@ -4,3 +4,8 @@ one:
   name: MyString
   email: mystring@example.com
   password_digest: <%= BCrypt::Password.create('password') %>
+
+two:
+  name: MyString
+  email: mystring@example.com
+  password_digest: <%= BCrypt::Password.create('password') %>
