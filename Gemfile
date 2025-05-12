@@ -12,6 +12,7 @@ gem "puma", ">= 5.0"
 gem "jbuilder"
 
 gem "graphql", "~> 2.0"
+gem "search_object_graphql", "~>1.0.5"
 
 gem "bcrypt", "~> 3.1.13"
 
