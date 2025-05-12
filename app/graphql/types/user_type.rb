@@ -5,7 +5,7 @@ module Types
     field :id, ID, null: false
     field :name, String, null: false
     field :email, String, null: false
-    field :votes, [ Types::Votes ], null: false
-    field :links, [ Types::Links ], null: false
+    field :votes, [ Types::VoteType ], null: false
+    field :links, [ Types::LinkType ], null: false
   end
 end
