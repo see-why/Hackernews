@@ -17,7 +17,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_12_034433) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.index ["user_id"], name: "index_links_on_user_id"
+    t.index [ "user_id" ], name: "index_links_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,8 +33,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_12_034433) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["link_id"], name: "index_votes_on_link_id"
-    t.index ["user_id"], name: "index_votes_on_user_id"
+    t.index [ "link_id" ], name: "index_votes_on_link_id"
+    t.index [ "user_id" ], name: "index_votes_on_user_id"
   end
 
   add_foreign_key "links", "users"
