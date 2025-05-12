@@ -13,7 +13,7 @@ class GraphqlController < ApplicationController
     context = {
       # Query context goes here, for example:
       session: session,
-      current_user: current_user,
+      current_user: current_user
     }
     result = HackernewsSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
@@ -30,7 +30,7 @@ class GraphqlController < ApplicationController
 
     crypt = ActiveSupport::MessageEncryptor.new(Rails.application.credentials.secret_key_base.byteslice(0..31))
     token = crypt.decrypt_and_verify session[:token]
-    user_id = token.gsub('user-id:', '').to_i
+    user_id = token.gsub("user-id:", "").to_i
     User.find user_id
   rescue ActiveSupport::MessageVerifier::InvalidSignature
     nil
@@ -60,6 +60,6 @@ class GraphqlController < ApplicationController
     logger.error e.message
     logger.error e.backtrace.join("\n")
 
-    render json: { errors: [{ message: e.message, backtrace: e.backtrace }], data: {} }, status: 500
+    render json: { errors: [ { message: e.message, backtrace: e.backtrace } ], data: {} }, status: 500
   end
 end
