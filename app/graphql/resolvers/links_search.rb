@@ -1,14 +1,14 @@
 require "search_object"
 require "search_object/plugin/graphql"
 
-class Resolvers::LinksSearch
+class Resolvers::LinksSearch < GraphQL::Schema::Resolver
   # include SearchObject for GraphQL
   include SearchObject.module(:graphql)
 
   # scope is starting point for search
   scope { Link.all }
 
-  type types[Types::LinkType]
+  type [ Types::LinkType ], null: false
 
   # inline input type definition for the advanced filter
   class LinkFilter < ::Types::BaseInputObject
