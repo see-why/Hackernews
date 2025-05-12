@@ -19,7 +19,7 @@ class Mutations::SignInUserTest < ActiveSupport::TestCase
     HackernewsSchema.execute(
       query,
       variables: args,
-      context: { current_user: user }
+      context: { current_user: user, session: {} }
     )
   end
 
