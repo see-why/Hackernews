@@ -1,6 +1,6 @@
 # Chill Hackernews
 
-This is a Hackernews clone built with Ruby on Rails and GraphQL.
+This is a Hackernews API server built with Ruby on Rails and GraphQL.
 
 ## Prerequisites
 
