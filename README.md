@@ -1,4 +1,4 @@
-# Chill Hackernews
+# Hackernews
 
 This is a Hackernews API server built with Ruby on Rails and GraphQL.
 
